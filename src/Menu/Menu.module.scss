@@ -1,0 +1,91 @@
+
+
+
+.menu {
+  cursor: pointer;
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+
+.menuContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #242539;
+  z-index: 9;
+  font-size: 30px;
+  line-height: 48px;
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+  @media screen and (max-width: 1023px) {
+    opacity: 1;
+    height: 3rem;
+    flex-direction: row;
+    font-size: 48px;
+    background-color: transparent;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 2px);
+    width: 50%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    button {
+      display: none;
+    }
+
+    a {
+      opacity: 0.6;
+      margin-right: 80px;
+      white-space: nowrap;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    font-size: 30px;
+    height: 60px;
+  }
+  a {
+    color: white;
+  }
+
+  .menuDots {
+    padding: 47px;
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.menuContentOpened {
+  transition: 0.2s ease-in-out;
+  opacity: 1;
+  height: 100vh;
+  
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 100px;
+  }
+}
+
+
+.menuLink{
+  text-transform: uppercase;
+}

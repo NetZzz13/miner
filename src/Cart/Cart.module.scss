@@ -1,0 +1,428 @@
+.cartAllMainBlock {
+  width: 410px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+ 
+  background-color: #17182e;
+  padding: 15px;
+  border-top: 2px rgba(255, 255, 255, 1) solid;
+  @media screen and (max-width: 1023px) {
+    
+    width: 93vw;
+  }
+}
+
+
+.cartBlock {
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+
+////////////////////////////////////////////////////////CART////////////////////////////////////////////////////
+.cart {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 13;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 60px;
+    border-top: 2px rgba(255, 255, 255, 1) solid;
+    border-right: 2px rgba(255, 255, 255, 1) solid;
+    transform: rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #17182e;
+  }
+}
+
+
+
+.titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+  p {
+    margin: 0;
+  }
+  img {
+    display: block;
+  }
+}
+
+.closeIcon {
+  img {
+    &:hover {
+      width: 120%;
+      cursor: pointer;
+      transition: all 10s ease-out;
+    }
+  }
+}
+.itemBlock {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.itemPhoto {
+  width: 63px;
+  min-height: 63px;
+  overflow: hidden;
+  margin: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: no-repeat center/30% url("../assets/removeIcon.png");
+  }
+
+  .itemIcon {
+    width: 80%;
+    display: block;
+
+    &:hover {
+      filter: blur(2px);
+      opacity: 0.2;
+      cursor: pointer;
+
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .removeIcon {
+    width: 80%;
+    display: none;
+  }
+}
+
+.itemCountBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  .itemCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .counter {
+      margin: 10px;
+    }
+    .arrow {
+      width: 100%;
+      cursor: pointer;
+      img {
+        width: 100%;
+        &:hover {
+          width: 120%;
+          transition: 0.2s ease-out;
+        }
+      }
+    }
+    img {
+      display: inline-block;
+      width: 10px;
+    }
+    span {
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+}
+
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+  .itemTitle {
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+/////////////////////////////////////Billing////////////////////////////////////////////////////////////////
+
+.billing {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1023px) {
+    border-top: none;
+    
+  }
+}
+
+.billingTitleBlock {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+.billingTitle {
+  margin-right: 20px;
+}
+
+.billingRememberMe {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+
+  input {
+    margin: 0 8px 0 0;
+    padding: 0;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.billingInputs {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas: ". ." ". ." "house house" "appartment appartment";
+  }
+
+  .billingInputsHouse {
+    grid-area: house;
+  }
+
+  .billingInputsAppartment {
+    grid-area: appartment;
+  }
+
+  input {
+    display: block;
+    background-color: #0b0c23;
+  }
+}
+
+/////////////////////////////////////////PAYMENT////////////////////////////////////////////////////////
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1023px) {
+    
+ 
+  }
+}
+
+.paymentTitleBlock {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+}
+
+.paymentTitle {
+  margin-right: 20px;
+}
+
+.paymentRememberMe {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 300;
+
+  input {
+    margin: 0 8px 0 0;
+    padding: 0;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.paymentSystems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  img {
+    display: block;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.paymentInputs {
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas: "cardNumber cardNumber" "cardHolder cardHolder" ". .";
+  }
+
+  .cardNumber {
+    grid-area: cardNumber;
+  }
+
+  .cardHolderName {
+    grid-area: cardHolder;
+  }
+
+  input {
+    display: block;
+    background-color: #0b0c23;
+  }
+}
+.cardNumber {
+  grid-area: cardNumber;
+}
+
+.cardHolderName {
+  grid-area: cardHolder;
+}
+
+.buttonsBlock {
+  button {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    &:first-child {
+      background-color: #1b1b67;
+      &:hover {
+        background-color: #1e1ec7;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////PURCHASE////////////////////////////////////////////////////////
+
+.purchase {
+ /*  width: 410px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+ 
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-top: 5px rgba(255, 255, 255, 0.1) solid; */
+}
+
+.titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+  p {
+    margin: 0;
+  }
+  img {
+    display: block;
+  }
+}
+
+.closeIcon {
+  img {
+    &:hover {
+      width: 120%;
+      cursor: pointer;
+      transition: all 10s ease-out;
+    }
+  }
+}
+
+.purchaseInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*  width: 100%; */
+  margin: 0 auto;
+  width: 100%;
+  max-height: 300px;
+
+  .purchaseText {
+    line-height: 26px;
+    margin: 40px 15px;
+    span {
+      color: green;
+    }
+    a {
+      color: yellow;
+      text-decoration: underline;
+      &:hover {
+        color: green;
+        transition: 0.7s;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////STEPS/////////////////////////////////////////////////////
+
+.stepsBlock {
+  
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  
+  
+  z-index: 20;
+
+  
+  width: 410px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-top: 5px rgba(255, 255, 255, 0.1) solid;
+
+  @media screen and (max-width: 1023px) {
+    width: 93vw;
+  }
+}
+
+.summuryBlock {
+  img {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+
+.buttonsBlock {
+  button {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      cursor: pointer;
+    }
+  }
+}

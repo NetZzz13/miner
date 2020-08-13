@@ -1,0 +1,61 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.footerSocial {
+  display: flex;
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 20px;
+  }
+
+  div {
+    width: 33px;
+    height: 33px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 5px;
+    position: relative;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}
+
+.footerReview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerReviewPoints {
+  font-size: 48px;
+  margin-right: 10px;
+}
+
+.footerReviewStars {
+  display: inline;
+}
+
+.footerReviewAuthor {
+  display: inline;
+}
+
+
+.footerSocialIcon{
+  display: block;
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+  }
+  
+}

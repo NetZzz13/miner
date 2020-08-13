@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  position: relative;
+  .dots {
+    display: none;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 90px;
+    .dots {
+      display: block;
+    }
+  }
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    padding-right: 25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    @media screen and (max-width: 1023px) {
+      padding: 0;
+    }
+  }
+  .languagesBlock {
+    display: flex;
+    align-items: center;
+
+    select {
+      width: 90px;
+      text-transform: capitalize;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin-bottom: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .languagesIcon {
+      vertical-align: middle;
+      padding-right: 10px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+}
+
+.rightBlock {
+  display: flex;
+  align-items: center;
+
+  .myProfile {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    .myProfileIcon {
+      padding-right: 10px;
+    }
+    &:after {
+      content: "\2807";
+      display: inline-block;
+      padding-left: 15px;
+      font-weight: 400;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+  .myProfileLabel {
+    text-transform: uppercase;
+  }
+
+  .money {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    &:after {
+      content: "\2807";
+      display: inline-block;
+      padding-left: 15px;
+      font-weight: 400;
+    }
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  .notifications {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    &:after {
+      content: "\2807";
+      display: inline-block;
+      padding-left: 15px;
+      font-weight: 400;
+    }
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  .cartBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 43px;
+    cursor: pointer;
+
+    .cartIcon {
+      display: flex;
+    }
+  }
+}
+
+.cartModal {
+  position: absolute;
+  top: 40px;
+  /*  right: -54px; */
+  right: 0;
+  background-color: #0b0c23;
+  z-index: 9;
+  margin: 0;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+   
+  }
+}
