@@ -2,14 +2,14 @@ const SET_LANGUAGE = "SET_LANGUAGE";
 
 const initialState = {
   languageItems: [
-    { id: 1, label: "ENG", value: "english", counter: 1 },
-    { id: 2, label: "RU", value: "russian", counter: 2 },
-    { id: 3, label: "SP", value: "spanish", counter: 3 },
-    { id: 4, label: "IL", value: "italian", counter: 4 },
-    { id: 5, label: "GE", value: "deutch", counter: 5 },
+    { id: 1, label: "ENG", value: "english" },
+    { id: 2, label: "RU", value: "russian" },
+    { id: 3, label: "SP", value: "spanish" },
+    { id: 4, label: "IL", value: "italian" },
+    { id: 5, label: "GE", value: "deutch" },
   ],
 
-  languageSelected: { label: "ENG", value: "english" },
+  languageSelected: { id: 1, label: "ENG", value: "english" },
 };
 
 export const languageReducer = (state = initialState, action) => {
@@ -17,8 +17,8 @@ export const languageReducer = (state = initialState, action) => {
     case SET_LANGUAGE: {
       return {
         ...state,
+        /* languageItems: state.languageItems.map((elem) => elem.id + 1), */
         languageSelected: action.languageSelected,
-        counter: action.counter + 1,
       };
     }
 
@@ -27,11 +27,10 @@ export const languageReducer = (state = initialState, action) => {
   }
 };
 
-export const setLanguageSelected = (languageSelected, counter) => {
+export const setLanguageSelected = (languageSelected) => {
   return {
     type: SET_LANGUAGE,
     languageSelected,
-    counter,
   };
 };
 

@@ -1,5 +1,9 @@
-
-
+.menuBlock {
+  position: relative;
+  top: -128px;
+  left: 50%;
+  z-index: 14;
+}
 
 .menu {
   cursor: pointer;
@@ -7,7 +11,6 @@
     display: none;
   }
 }
-
 
 .menuContent {
   position: fixed;
@@ -33,8 +36,9 @@
     font-size: 48px;
     background-color: transparent;
     position: absolute;
-    top: 60px;
-    left: calc(50% - 2px);
+    top: 85px;
+    left: 0;
+    /* left: calc(50% - 2px); */
     width: 50%;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -51,6 +55,8 @@
       opacity: 0.6;
       margin-right: 80px;
       white-space: nowrap;
+      
+
     }
 
     .active {
@@ -62,6 +68,7 @@
     background-color: inherit;
     font-size: 30px;
     height: 60px;
+ /*    margin: 50px 0px; */
   }
   a {
     color: white;
@@ -82,10 +89,10 @@
   
   @media screen and (max-width: 1023px) {
     margin-bottom: 100px;
+    
   }
 }
 
-
-.menuLink{
+.menuLink {
   text-transform: uppercase;
 }

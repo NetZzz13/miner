@@ -11,7 +11,7 @@ import Menu from "../Menu/Menu";
 import { connect } from "react-redux";
 import Cart from "../Cart/Cart";
 import { setLanguageSelected } from "../redux/languageReducer";
-import dots from "../assets/dots.png";
+import controls from "../assets/controls.png";
 import { NavLink } from "react-router-dom";
 
 const Header = (props) => {
@@ -34,7 +34,7 @@ const Header = (props) => {
 
   return (
     <div className={s.header}>
-      {/* <div className={s.dots}><img src={dots}/></div> */}
+      <div className={s.controls}><img src={controls}/></div>
       <div className={s.leftBlock}>
         <NavLink to="/home">
           <div className={s.logo}>
@@ -46,6 +46,19 @@ const Header = (props) => {
           <div className={s.languagesIcon}>
             <img src={languagesIcon} alt="languagesIcon" />
           </div>
+
+          {/* <div
+            onClick={() =>
+              props.setLanguageSelected(
+                props.languageItems.find((item) => {
+                  return item.value === "italian";
+                })
+              )
+            }
+          >
+            {props.languageSelected.label}
+          </div> */}
+
           <select
             className={s.languagesList}
             defaultValue={props.languageSelected.value}
@@ -67,7 +80,7 @@ const Header = (props) => {
           </select>
         </div>
       </div>
-      <Menu />
+     {/*  <Menu /> */}
       <div className={s.rightBlock}>
         <div className={s.myProfile}>
           <div className={s.myProfileIcon}>
@@ -103,7 +116,10 @@ const Header = (props) => {
         </div>
         {isOpenCart && (
           <div className={s.cartModal}>
-            <Cart toggleViewCart={toggleViewCart} toggleBodyScroll={toggleBodyScroll}/>
+            <Cart
+              toggleViewCart={toggleViewCart}
+              toggleBodyScroll={toggleBodyScroll}
+            />
           </div>
         )}
       </div>
@@ -126,7 +142,5 @@ let mapDispatchToProps = (dispatch) => {
     },
   };
 };
-
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

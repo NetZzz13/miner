@@ -10,6 +10,7 @@ import Footer from "./Footer/Footer";
 import { Provider } from "react-redux";
 import store from "./redux/reduxStore";
 import { BrowserRouter } from "react-router-dom";
+import Menu from "./Menu/Menu";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <div className={s.appWrapper}>
           <div className={s.app}>
             <Header />
+            <Menu />
             <div className={s.appContent}>
               <Filters />
               <Items />
