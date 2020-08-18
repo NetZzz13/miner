@@ -13,6 +13,8 @@
 }
 
 .cartBlock {
+  /* display: flex;
+  flex-direction: column; */
   @media screen and (max-width: 1023px) {
     width: 100%;
     height: 100vh;
@@ -25,6 +27,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  top: 0;
+  left: 0;
   z-index: 13;
 
   @media screen and (max-width: 1023px) {
@@ -34,7 +38,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -6px;
+    top: -5px;
     right: 34px;
     border-top: 2px rgba(255, 255, 255, 1) solid;
     border-right: 2px rgba(255, 255, 255, 1) solid;
@@ -79,7 +83,7 @@
 
 .itemPhoto {
   width: 63px;
-  min-height: 63px;
+  /* min-height: 63px; */
   overflow: hidden;
   margin: 8px;
   display: flex;
@@ -150,7 +154,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
+  padding-bottom: 10px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 
   .itemTitle {
@@ -165,9 +169,9 @@
 .billing {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1023px) {
+  /* @media screen and (max-width: 1023px) {
     border-top: none;
-  }
+  } */
 }
 
 .billingTitleBlock {
@@ -223,8 +227,9 @@
 .payment {
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1023px) {
-  }
+  /* @media screen and (max-width: 1023px) {
+    border-top: none;
+  } */
 }
 
 .paymentTitleBlock {
@@ -260,6 +265,12 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+
+  @media screen and (max-width: 1023px) {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
   img {
     display: block;
     width: 100%;

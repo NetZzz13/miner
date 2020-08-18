@@ -22,11 +22,13 @@ const Header = (props) => {
 
   let toggleBodyScroll = () => {
     let main = document.querySelector("main");
+    /* let menuContent = document.querySelector(".menuContent"); */
     toggleScroll(!isToggleBodyScroll);
     /* console.log(isToggleBodyScroll); */
 
     if (isToggleBodyScroll) {
       main.classList.add("hideBodyScroll");
+      /* menuContent.classList.add("hideBodyScroll"); */
     } else {
       main.classList.remove("hideBodyScroll");
     }
