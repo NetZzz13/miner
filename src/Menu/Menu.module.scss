@@ -1,12 +1,12 @@
 .menuBlock {
-  position: relative;
-  top: -128px;
-  left: 50%;
-  z-index: 14;
+  
 }
 
 .menu {
   cursor: pointer;
+  position: absolute;
+  top: 3%;
+  left: 50%;
   @media screen and (max-width: 1023px) {
     display: none;
   }
@@ -23,9 +23,9 @@
   align-items: center;
   justify-content: flex-start;
   background-color: #242539;
-  z-index: 9;
+  z-index: 10;
   font-size: 30px;
-  line-height: 48px;
+  // line-height: 48px;
   transition: 0.2s ease-in-out;
   opacity: 0;
   overflow: hidden;
@@ -36,8 +36,8 @@
     font-size: 48px;
     background-color: transparent;
     position: absolute;
-    top: 85px;
-    left: 0;
+    top: 90px;
+    left: 50%;
     /* left: calc(50% - 2px); */
     width: 50%;
     overflow-x: scroll;
@@ -53,7 +53,7 @@
 
     a {
       opacity: 0.6;
-      margin-right: 80px;
+      margin-right: 60px;
       white-space: nowrap;
       
 

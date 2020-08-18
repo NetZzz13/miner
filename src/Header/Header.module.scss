@@ -10,7 +10,7 @@
     display: none;
   }
   @media screen and (max-width: 1023px) {
-    margin-bottom: 90px;
+    margin-bottom: 75px;
     .controls {
       cursor: pointer;
       display: block;
@@ -62,7 +62,7 @@
 .rightBlock {
   display: flex;
   align-items: center;
-  z-index: 17;
+  // z-index: 17;
 
   .myProfile {
     display: flex;
@@ -136,13 +136,13 @@
 .cartModal {
   position: absolute;
   top: 40px;
-  /*  right: -54px; */
-  right: 0;
+  right: 0px; 
   background-color: #0b0c23;
-  z-index: 9;
+  z-index: 15;
   margin: 0;
   @media screen and (max-width: 1023px) {
     width: 100%;
+    height: 100vh;
    
   }
 }

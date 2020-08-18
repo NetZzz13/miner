@@ -16,7 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <div className={s.appWrapper}>
+        <main className={s.appWrapper}>
           <div className={s.app}>
             <Header />
             <Menu />
@@ -28,7 +28,7 @@ const App = () => {
             </div>
             <Footer />
           </div>
-        </div>
+        </main>
       </Provider>
     </BrowserRouter>
   );

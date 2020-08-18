@@ -21,14 +21,14 @@ const Header = (props) => {
   let toggleViewCart = () => setData(!isOpenCart);
 
   let toggleBodyScroll = () => {
-    let body = document.querySelector("body");
+    let main = document.querySelector("main");
     toggleScroll(!isToggleBodyScroll);
     /* console.log(isToggleBodyScroll); */
 
     if (isToggleBodyScroll) {
-      body.classList.add("hideBodyScroll");
+      main.classList.add("hideBodyScroll");
     } else {
-      body.classList.remove("hideBodyScroll");
+      main.classList.remove("hideBodyScroll");
     }
   };
 

@@ -14,7 +14,9 @@ body {
 
 @media screen and (max-width: 1023px) {
   .hideBodyScroll {
+    width: 100%;
     overflow: hidden;
+    margin: 0;
   }
 }
 
@@ -40,6 +42,13 @@ code {
 }
  */
 
+
+ *,*:before,*::after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ 
 /*remove the stroke lines for some browsers */
 :focus,
 :active {
